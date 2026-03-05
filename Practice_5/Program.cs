@@ -6,10 +6,6 @@ class Program
         UniversityMember professor = new Professor("professor1", "123");
         professor.PerfomDuties();
         professor.PerfomDuties();
-        professor.PerfomDuties();
-        professor.PerfomDuties();
-        professor.PerfomDuties();
-        professor.PerfomDuties();
 
         UniversityMember student = new UndergraduateStudent("student1", "235");
         student.PerfomDuties();
