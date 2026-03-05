@@ -3,6 +3,10 @@ class UniversityRegistry
 {
     private List<UniversityMember> members;
 
+    public UniversityRegistry()
+    {
+        members = [];
+    }
     public void AddMember(UniversityMember m)
     {
         members.Add(m);

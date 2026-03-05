@@ -29,6 +29,11 @@ class UniversityMember
         get => actionLog;
         private set
         {
+            Console.WriteLine($"{name}:{value.Count}");
+            if (value.Count >= 5)
+            {
+                throw new Exception("Reached a daily limit of 5 duties.");
+            }
             actionLog = value;
         }
     } 
@@ -37,15 +42,13 @@ class UniversityMember
     {
         Name = name;
         MemberId = memberId;
+        ActionLog = [];
     }
     
     virtual public void PerfomDuties()
     {
-        if (actionLog.Count >= 5)
-        {
-            throw new Exception("Readched a daily limit of 5 duties.");
-        }
-        actionLog.Add("Some action");
+        Console.WriteLine($"{name}: {ActionLog.Count}");
+        ActionLog.Add("Some action");
     }
 
 }

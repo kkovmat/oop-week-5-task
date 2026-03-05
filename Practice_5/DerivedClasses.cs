@@ -5,11 +5,11 @@ class Professor : UniversityMember
 
     public override void PerfomDuties()
     {
-        actionLog.Add("Lecture delivered");
+        ActionLog.Add("Lecture delivered");
     }
     public void ConductResearch(string topic)
     {
-        actionLog.Add("Research conducted");
+        ActionLog.Add("Research conducted");
     }
 }
 
@@ -19,7 +19,7 @@ class UndergraduateStudent : UniversityMember
 
     public override void PerfomDuties()
     {
-        actionLog.Add("Lab work completed");
+        ActionLog.Add("Lab work completed");
     }
 }
 
@@ -30,6 +30,6 @@ class GraduateStudent : UndergraduateStudent
     public override void PerfomDuties()
     {
         base.PerfomDuties();
-        actionLog.Add("Thesis research update");
+        ActionLog.Add("Thesis research update");
     }
 }
