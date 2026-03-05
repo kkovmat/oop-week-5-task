@@ -24,6 +24,14 @@ class UniversityMember
         }
     }
     protected List<string> actionLog;
+    public List<string> ActionLog
+    {
+        get => actionLog;
+        private set
+        {
+            actionLog = value;
+        }
+    } 
 
     public UniversityMember(string name, string memberId)
     {
@@ -37,6 +45,7 @@ class UniversityMember
         {
             throw new Exception("Readched a daily limit of 5 duties.");
         }
+        actionLog.Add("Some action");
     }
 
 }
