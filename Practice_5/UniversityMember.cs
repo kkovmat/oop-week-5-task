@@ -2,7 +2,7 @@ namespace Practice_5;
 class UniversityMember
 {
     private string name;
-    public readonly string MemberId;
+    private string memberId;
     public string Name
     {
         get => name;
@@ -13,6 +13,14 @@ class UniversityMember
                 throw new Exception("Name cannot be empty.");
             }
             name = value;            
+        }
+    }
+    public string MemberId
+    {
+        get => memberId;
+        private set
+        {
+            memberId = value;
         }
     }
     protected List<string> actionLog;
